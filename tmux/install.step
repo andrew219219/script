@@ -1,0 +1,9 @@
+tar zxf libevent-2.0.21-stable.tar.gz
+cd libevent-2.0.21-stable
+./configure -prefix=$HOME/tools/libevent
+make && make install
+
+tar zxf tmux-1.9a.tar.gz
+cd tmux-1.9a
+./configure -prefix=$HOME/tools/tmux CFLAGS="-I$HOME/tools/libevent/include" LDFLAGS="-L$HOME/tools/libevent/lib"
+make && make install
