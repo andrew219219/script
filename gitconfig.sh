@@ -8,8 +8,9 @@ if [ "$?" -eq "127" ];then #git not exists
 fi
 
 git config --global diff.tool vimdiff
+git config --global merge.tool vimdiff
+git config --global alias.di difftool
 git config --global alias.st status
 git config --global alias.ci commit
 git config --global alias.co checkout
-git config --global push.default matching
-
+git config --global difftool.prompt false
